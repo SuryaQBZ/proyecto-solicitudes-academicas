@@ -49,6 +49,11 @@ filtroPrioridad.addEventListener(
   aplicarFiltros
 );
 
+filtroBusqueda.addEventListener(
+  'input',
+  aplicarFiltros
+);
+
 // -------------------------
 // CARGAR SOLICITUDES
 // -------------------------
@@ -185,12 +190,26 @@ function aplicarFiltros() {
 
   const tipo = filtroTipo.value;
   const prioridad = filtroPrioridad.value;
+  const texto = filtroBusqueda.value.toLowerCase();
+
   const resultado = solicitudes.filter(solicitud => {
 
-    const coincideTipo = !tipo || solicitud.tipo === tipo;
-    const coincidePrioridad = !prioridad || solicitud.prioridad === prioridad;
+    const coincideTipo =
+      !tipo || solicitud.tipo === tipo;
 
-    return coincideTipo && coincidePrioridad;
+    const coincidePrioridad =
+      !prioridad || solicitud.prioridad === prioridad;
+
+    const coincideTexto =
+      !texto ||
+      solicitud.nombreEstudiante.toLowerCase().includes(texto) ||
+      solicitud.asignatura.toLowerCase().includes(texto);
+
+    return (
+      coincideTipo &&
+      coincidePrioridad &&
+      coincideTexto
+    );
   });
 
   mostrarSolicitudes(resultado);
