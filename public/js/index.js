@@ -4,7 +4,7 @@ const tablaSolicitudesBody = document.getElementById('tablaSolicitudesBody');
 const mensaje = document.getElementById('mensaje');
 const filtroTipo = document.getElementById('filtroTipo');
 const filtroPrioridad = document.getElementById('filtroPrioridad');
-
+const filtroBusqueda = document.getElementById('filtroBusqueda');
 let solicitudes = [];
 
 // -------------------------
