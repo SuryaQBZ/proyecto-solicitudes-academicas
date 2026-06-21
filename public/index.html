@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Solicitudes Académicas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Solicitudes Académicas</h1>
+    <section class="card">
+      <div class="barra-superior">
+        <button id="btnAgregar" class="btn-secundario">Agregar solicitud</button>
+        <button id="btnCargar">Cargar listado</button>
+      </div>
+      <div class="barra-superior">
+        <label for="filtroTipo">Tipo:</label>
+        <select id="filtroTipo">
+            <option value="">Todos</option>
+            <option value="Evaluacion">Evaluación</option>
+            <option value="Asistencia">Asistencia</option>
+            <option value="Contenidos">Contenidos</option>
+            <option value="Plataforma">Plataforma</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <label for="filtroPrioridad">Prioridad:</label>
+        <select id="filtroPrioridad">
+            <option value="">Todas</option>
+            <option value="Baja">Baja</option>
+            <option value="Media">Media</option>
+            <option value="Alta">Alta</option>
+        </select>
+        </div>
+      <div id="mensaje"></div>
+      <div class="tabla-responsive">
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre estudiante</th>
+              <th>Correo</th>
+              <th>Asignatura</th>
+              <th>Tipo</th>
+              <th>Descripción</th>
+              <th>Prioridad</th>
+              <th>Fecha ingreso</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaSolicitudesBody">
+            <tr>
+              <td colspan="9">Presione "Cargar listado" para mostrar las solicitudes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>

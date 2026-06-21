@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Contenedor principal */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Formularios */
+.grupo {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botones */
+button {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #005ea3;
+}
+
+.btn-secundario {
+  background-color: #555;
+}
+
+.btn-secundario:hover {
+  background-color: #333;
+}
+
+.btn-peligro {
+  background-color: #c62828;
+}
+
+.btn-peligro:hover {
+  background-color: #8e1d1d;
+}
+
+.btn-accion {
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+/* Barra de acciones */
+.barra-superior {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+/* Mensajes */
+#mensaje {
+  margin-top: 15px;
+}
+
+.exito {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+/* Tabla */
+.tabla-responsive {
+  overflow-x: auto;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.tabla th, .tabla td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla th {
+  background-color: #0078d4;
+  color: white;
+}
+
+/* Estados visuales */
+.prioridad-alta {
+  color: #c62828;
+  font-weight: bold;
+}
+
+.prioridad-media {
+  color: #ef6c00;
+  font-weight: bold;
+}
+
+.prioridad-baja {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .barra-superior {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
