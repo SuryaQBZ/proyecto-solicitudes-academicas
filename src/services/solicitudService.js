@@ -31,7 +31,6 @@ function validarCampos(solicitud) {
     tipo,
     descripcion,
     prioridad,
-    fechaIngreso
   } = solicitud;
 
   if (
@@ -40,8 +39,7 @@ function validarCampos(solicitud) {
     !asignatura ||
     !tipo ||
     !descripcion ||
-    !prioridad ||
-    !fechaIngreso
+    !prioridad
   ) {
 
     throw new Error('Campos obligatorios incompletos.');
@@ -52,14 +50,8 @@ function validarCampos(solicitud) {
     throw new Error('Formato de correo inválido.');
   }
 
-  if (!validarTipo(tipo)) {
-
-    throw new Error('Tipo de solicitud inválido.');
-  }
-
-  if (!validarPrioridad(prioridad)) {
-
-    throw new Error('Prioridad inválida.');
+  if (descripcion.trim().length < 20) {
+    throw new Error('La descripción debe tener al menos 20 caracteres.');
   }
 }
 

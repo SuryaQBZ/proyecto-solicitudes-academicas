@@ -2,8 +2,8 @@ const pool = require('../config/db');
 
 async function insertarSolicitud(solicitud) {
   const sql = `
-    INSERT INTO solicitud (nombreEstudiante, correo, asignatura, tipo, descripcion, prioridad, fechaIngreso)
-    VALUES (?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO solicitud (nombreEstudiante, correo, asignatura, tipo, descripcion, prioridad)
+    VALUES (?, ?, ?, ?, ?, ?)
   `;
 
   const values = [
@@ -13,7 +13,6 @@ async function insertarSolicitud(solicitud) {
     solicitud.tipo,
     solicitud.descripcion,
     solicitud.prioridad,
-    solicitud.fechaIngreso,
   ];
 
   const [result] = await pool.execute(sql, values);
@@ -33,7 +32,7 @@ async function obtenerTodasLasSolicitudes() {
 
 async function buscarPorId(id) {
   const sql = `
-    SELECT id, nombreEstudiante, correo, asignatura, tipo, descripcion, prioridad, fechaIngreso
+    SELECT id, nombreEstudiante, correo, asignatura, tipo, descripcion, prioridad, fechaIngreso 
     FROM solicitud
     WHERE id = ?
   `;
@@ -45,7 +44,7 @@ async function buscarPorId(id) {
 async function actualizarSolicitud(id, solicitud) {
   const sql = `
     UPDATE solicitud
-    SET nombreEstudiante = ?, correo = ?, asignatura = ?, tipo = ?, descripcion = ?, prioridad = ?, fechaIngreso = ?
+    SET nombreEstudiante = ?, correo = ?, asignatura = ?, tipo = ?, descripcion = ?, prioridad = ?
     WHERE id = ?
   `;
 
@@ -56,7 +55,6 @@ async function actualizarSolicitud(id, solicitud) {
     solicitud.tipo,
     solicitud.descripcion,
     solicitud.prioridad,
-    solicitud.fechaIngreso,
     id
   ];
 

@@ -5,8 +5,13 @@ body {
   padding: 20px;
 }
 
-.container {
-  max-width: 1500px;
+.containerIndex {
+  max-width: 1800px;
+  margin: auto;
+}
+
+.containerFormulario {
+  max-width: 800px;
   margin: auto;
 }
 
@@ -36,9 +41,7 @@ label {
   font-weight: bold;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -153,8 +156,8 @@ button:hover {
 .tabla th:nth-child(4) { min-width: 160px; }
 .tabla th:nth-child(5) { min-width: 120px; }
 .tabla th:nth-child(6) { min-width: 250px; }
-.tabla th:nth-child(7) { min-width: 120px; }
-.tabla th:nth-child(8) { min-width: 180px; }
+.tabla th:nth-child(7) { min-width: 100px; }
+.tabla th:nth-child(8) { min-width: 200px; }
 .tabla th:nth-child(9) { min-width: 180px; }
 
 /* Estados visuales */

@@ -7,25 +7,14 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <div class="container">
-
+  <div class="containerIndex">
     <h1>Registro de Solicitudes Académicas</h1>
-
     <section class="card">
-
       <div class="barra-superior">
-        <button id="btnAgregar" class="btn-secundario">
-          Agregar solicitud
-        </button>
-
-        <button id="btnCargar">
-          Cargar listado
-        </button>
+        <button id="btnAgregar" class="btn-secundario">Agregar solicitud</button>
+        <button id="btnCargar">Cargar listado</button>
       </div>
-
       <div class="barra-superior">
-
         <label for="filtroTipo">Tipo:</label>
         <select id="filtroTipo">
           <option value="">Todos</option>
@@ -35,7 +24,6 @@
           <option value="Plataforma">Plataforma</option>
           <option value="Otro">Otro</option>
         </select>
-
         <label for="filtroPrioridad">Prioridad:</label>
         <select id="filtroPrioridad">
           <option value="">Todas</option>
@@ -43,21 +31,12 @@
           <option value="Media">Media</option>
           <option value="Alta">Alta</option>
         </select>
-
         <label for="filtroBusqueda">Buscar:</label>
-        <input
-          type="text"
-          id="filtroBusqueda"
-          placeholder="Nombre o asignatura">
-
+        <input type="text" id="filtroBusqueda" placeholder="Nombre o asignatura">
       </div>
-
       <div id="mensaje"></div>
-
       <div class="tabla-responsive">
-
         <table class="tabla">
-
           <thead>
             <tr>
               <th>ID</th>
@@ -71,24 +50,15 @@
               <th>Acciones</th>
             </tr>
           </thead>
-
           <tbody id="tablaSolicitudesBody">
             <tr>
-              <td colspan="9">
-                Presione "Cargar listado" para mostrar las solicitudes.
-              </td>
+              <td colspan="9">Presione "Cargar listado" para mostrar las solicitudes.</td>
             </tr>
           </tbody>
-
         </table>
-
       </div>
-
     </section>
-
   </div>
-
   <script src="js/index.js"></script>
-
 </body>
 </html>

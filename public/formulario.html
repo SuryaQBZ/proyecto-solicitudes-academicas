@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
+<div class="containerFormulario">
   <h1 id="tituloFormulario">Ingresar Solicitud Académica</h1>
   <section class="card">
     <form id="formSolicitud">
       <div class="grupo">
         <label for="nombreEstudiante">Nombre del estudiante</label>
-        <input type="text" id="nombreEstudiante" name="nombreEstudiante" required>
+        <input type="text" id="nombreEstudiante" name="nombreEstudiante" placeholder="Ingrese nombre" required>
       </div>
       <div class="grupo">
         <label for="correo">Correo institucional</label>
-        <input type="email" id="correo" name="correo" required>
+        <input type="email" id="correo" name="correo" placeholder="Ingrese correo" required>
       </div>
       <div class="grupo">
         <label for="asignatura">Asignatura</label>
@@ -46,10 +46,6 @@
           <option value="Media">Media</option>
           <option value="Alta">Alta</option>
         </select>
-      </div>
-      <div class="grupo">
-        <label for="fechaIngreso">Fecha de ingreso</label>
-        <input type="date" id="fechaIngreso" name="fechaIngreso" required>
       </div>
       <div class="barra-superior">
         <button type="submit" id="btnGuardar">Guardar solicitud</button>

@@ -121,7 +121,7 @@ function mostrarSolicitudes(lista) {
       <td>${solicitud.tipo}</td>
       <td>${solicitud.descripcion}</td>
       <td>${solicitud.prioridad}</td>
-      <td>${formatearFecha(solicitud.fechaIngreso)}</td>
+      <td>${new Date(solicitud.fechaIngreso).toLocaleString('es-CL')}</td>
       <td>
         <button
           class="btn-accion btn-actualizar"

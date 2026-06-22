@@ -39,7 +39,6 @@ formSolicitud.addEventListener('submit', async (e) => {
   const tipo = document.getElementById('tipo').value;
   const descripcion = document.getElementById('descripcion').value.trim();
   const prioridad = document.getElementById('prioridad').value;
-  const fechaIngreso = document.getElementById('fechaIngreso').value;
 
   if (
     !nombreEstudiante ||
@@ -47,8 +46,7 @@ formSolicitud.addEventListener('submit', async (e) => {
     !asignatura ||
     !tipo ||
     !descripcion ||
-    !prioridad ||
-    !fechaIngreso
+    !prioridad 
   ) {
 
     mensaje.innerHTML =
@@ -63,8 +61,7 @@ formSolicitud.addEventListener('submit', async (e) => {
     asignatura,
     tipo,
     descripcion,
-    prioridad,
-    fechaIngreso
+    prioridad
   };
 
   const url = modoEdicion
@@ -140,7 +137,6 @@ async function cargarSolicitudParaEditar(id) {
     document.getElementById('tipo').value = s.tipo;
     document.getElementById('descripcion').value = s.descripcion;
     document.getElementById('prioridad').value = s.prioridad;
-    document.getElementById('fechaIngreso').value = s.fechaIngreso.split('T')[0];
 
   } catch (error) {
 
