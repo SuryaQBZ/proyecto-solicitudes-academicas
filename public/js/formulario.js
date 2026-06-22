@@ -44,9 +44,7 @@ formSolicitud.addEventListener('submit', async (e) => {
     !nombreEstudiante ||
     !correo ||
     !asignatura ||
-    !tipo ||
-    !descripcion ||
-    !prioridad 
+    !descripcion
   ) {
 
     mensaje.innerHTML =

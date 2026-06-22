@@ -37,21 +37,26 @@ function validarCampos(solicitud) {
     !nombreEstudiante ||
     !correo ||
     !asignatura ||
-    !tipo ||
-    !descripcion ||
-    !prioridad
+    !descripcion
   ) {
 
     throw new Error('Campos obligatorios incompletos.');
   }
 
-  if (!validarEmail(correo)) {
-
+  if (!validarEmail(correo.trim())) {
     throw new Error('Formato de correo inválido.');
   }
 
   if (descripcion.trim().length < 20) {
     throw new Error('La descripción debe tener al menos 20 caracteres.');
+  }
+
+  if (!validarPrioridad(prioridad)){
+    throw new Error('Campo prioridad inválido.');
+  }
+
+  if (!validarTipo(tipo)){
+    throw new Error('Campo tipo de solicitud inválido.');
   }
 }
 
